@@ -9,12 +9,15 @@ This PowerShell script expects a zip file containing multiple mp3 files to be me
 1. Run [mp3cat](https://github.com/dmulholland/mp3cat) on the folder where the first `mp3` file was found.
 1. All mp3 files in the folder will be merged into `C:\foo\bar.mp3`, where `C:\foo\bar.zip` is the input zipped mix file.
 
-Usage:
+## Prerequisites 
+Make sure that [mp3cat](https://github.com/dmulholland/mp3cat) is either in your `PATH` or in the script's working folder.
+
+## Usage
 ```posh
 Merge-ZippedMix.ps1 mix.zip
 ```
 - Both CBR and VBR mp3s are supported (by virtue of mp3cat).
- - The ID3 tag of the first mp3 file will be used for the merged file.
+ - The ID3 tag of the first mp3 file will be used for the merged file (using `mp3cat --tag`).
 
 ## Mass execution
  If you have multiple mix zip files in some folder and you'd like to merge all of them, try:
