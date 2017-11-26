@@ -1,8 +1,8 @@
 # Merge-ZippedMix
-Merges zipped mp3 files comprising a mix/album (using [mp3cat](https://github.com/dmulholland/mp3cat)).
+Merges zipped mp3 files comprising a mix/album without re-encoding (using [mp3cat](https://github.com/dmulholland/mp3cat)).
 
 ## Details
-This PowerShell script expects a zip file containing multiple mp3 files to be merged into a single mp3 file. The script will do the following:
+This PowerShell script expects a zip file containing multiple mp3 files to be merged into a single mp3 file. It will do so without re-encoding, preserving the original audio quality. Specifically, the script will do the following:
 
 1. Extract the mixed zip file into the `%TEMP%` folder.
 1. Recursively look for an `mp3` file in that folder.
